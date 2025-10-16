@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, Clock } from 'lucide-react';
 import { Service } from '@/types';
 import Modal from '@/components/ui/Modal';
+import Fallback3DScene from '@/components/3d/Fallback3DScene';
 
 interface ServiceDetailModalProps {
   service: Service | null;
@@ -20,7 +21,6 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
   if (!service) return null;
 
   const Icon = service.icon;
-  const VisualComponent = service.visualComponent;
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
@@ -59,15 +59,7 @@ const ServiceDetailModal: React.FC<ServiceDetailModalProps> = ({
             backgroundImage: `radial-gradient(circle at 50% 50%, ${service.themeColor}10 0%, transparent 70%)`,
           }}
         >
-          <Suspense
-            fallback={
-              <div className="flex h-full items-center justify-center">
-                <div className="h-12 w-12 animate-spin rounded-full border-4 border-light-bg-tertiary border-t-accent-primary dark:border-dark-bg-tertiary" />
-              </div>
-            }
-          >
-            <VisualComponent />
-          </Suspense>
+          <Fallback3DScene color={service.themeColor} title={service.title} />
         </div>
 
         {/* Content */}

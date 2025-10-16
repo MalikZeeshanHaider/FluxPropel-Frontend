@@ -85,7 +85,7 @@ const MorphingWireframe: React.FC = () => {
   );
 };
 
-const UIUXScene: React.FC = () => {
+function UIUXScene() {
   return (
     <div className="h-full w-full">
       <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
@@ -97,6 +97,6 @@ const UIUXScene: React.FC = () => {
       </Canvas>
     </div>
   );
-};
+}
 
 export default UIUXScene;

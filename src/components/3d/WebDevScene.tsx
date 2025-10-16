@@ -64,7 +64,7 @@ const CodeBlock: React.FC<{ position: [number, number, number] }> = ({
   );
 };
 
-const WebDevScene: React.FC = () => {
+function WebDevScene() {
   return (
     <div className="h-full w-full">
       <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
@@ -81,6 +81,6 @@ const WebDevScene: React.FC = () => {
       </Canvas>
     </div>
   );
-};
+}
 
 export default WebDevScene;

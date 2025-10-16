@@ -48,7 +48,7 @@ const Pipeline: React.FC = () => {
   );
 };
 
-const DevOpsScene: React.FC = () => {
+function DevOpsScene() {
   return (
     <div className="h-full w-full">
       <Canvas camera={{ position: [0, 3, 6], fov: 50 }}>
@@ -97,6 +97,6 @@ const DevOpsScene: React.FC = () => {
       </Canvas>
     </div>
   );
-};
+}
 
 export default DevOpsScene;

@@ -75,7 +75,7 @@ const NeuralNetwork: React.FC = () => {
   );
 };
 
-const AIMLScene: React.FC = () => {
+function AIMLScene() {
   return (
     <div className="h-full w-full">
       <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
@@ -86,6 +86,6 @@ const AIMLScene: React.FC = () => {
       </Canvas>
     </div>
   );
-};
+}
 
 export default AIMLScene;

@@ -1,19 +1,8 @@
 import { Brain, Code, Cloud, Palette } from 'lucide-react';
 import { Service, Project } from '@/types';
-import dynamic from 'next/dynamic';
 
-const AIMLScene = dynamic(() => import('@/components/3d/AIMLScene'), {
-  ssr: false,
-});
-const WebDevScene = dynamic(() => import('@/components/3d/WebDevScene'), {
-  ssr: false,
-});
-const DevOpsScene = dynamic(() => import('@/components/3d/DevOpsScene'), {
-  ssr: false,
-});
-const UIUXScene = dynamic(() => import('@/components/3d/UIUXScene'), {
-  ssr: false,
-});
+// Placeholder for visual components - will be loaded dynamically
+const PlaceholderComponent = () => null;
 
 export const SERVICES: Service[] = [
   {
@@ -24,7 +13,7 @@ export const SERVICES: Service[] = [
       'Transform your business with cutting-edge artificial intelligence and machine learning solutions. We develop custom ML models tailored to your specific needs, from predictive analytics to natural language processing. Our team specializes in building scalable AI systems that can process vast amounts of data, identify patterns, and make intelligent decisions in real-time.\n\nWe handle the entire ML pipeline from data collection and preprocessing to model training, optimization, and deployment. Our solutions integrate seamlessly with your existing infrastructure and provide intuitive APIs for easy integration. Whether you need computer vision, recommendation systems, or predictive maintenance, we deliver production-ready AI solutions that drive measurable business value.',
     icon: Brain,
     themeColor: '#6366F1',
-    visualComponent: AIMLScene,
+    visualComponent: PlaceholderComponent,
     deliverables: [
       'Custom ML model development',
       'Data pipeline architecture',
@@ -78,7 +67,7 @@ export const SERVICES: Service[] = [
       'Build exceptional web experiences with modern frameworks and best practices. We create fast, responsive, and user-friendly web applications using the latest technologies like React, Next.js, and TypeScript. Our development approach focuses on performance, scalability, and maintainability, ensuring your application can grow with your business.\n\nFrom single-page applications to complex enterprise platforms, we deliver solutions that combine beautiful design with robust functionality. We implement server-side rendering for optimal SEO, progressive web app features for mobile-like experiences, and comprehensive testing to ensure reliability. Our code is clean, well-documented, and follows industry best practices.',
     icon: Code,
     themeColor: '#06B6D4',
-    visualComponent: WebDevScene,
+    visualComponent: PlaceholderComponent,
     deliverables: [
       'Responsive web application',
       'API integration and development',
@@ -132,7 +121,7 @@ export const SERVICES: Service[] = [
       'Accelerate your development lifecycle with modern DevOps practices and cloud infrastructure. We design and implement automated CI/CD pipelines that enable rapid, reliable deployments while maintaining high quality standards. Our cloud solutions leverage AWS, Azure, or Google Cloud to provide scalable, cost-effective infrastructure that grows with your needs.\n\nWe specialize in containerization with Docker and orchestration with Kubernetes, enabling consistent deployments across environments. Our infrastructure-as-code approach ensures reproducibility and version control for all infrastructure changes. We implement comprehensive monitoring and logging solutions that provide real-time insights into system health and performance.',
     icon: Cloud,
     themeColor: '#10B981',
-    visualComponent: DevOpsScene,
+    visualComponent: PlaceholderComponent,
     deliverables: [
       'CI/CD pipeline setup',
       'Cloud infrastructure provisioning',
@@ -186,7 +175,7 @@ export const SERVICES: Service[] = [
       'Create memorable digital experiences with thoughtful UI/UX design. We combine aesthetic excellence with deep understanding of user behavior to craft interfaces that are not only beautiful but also intuitive and accessible. Our design process is research-driven, starting with user personas and journey mapping to ensure we solve real user problems.\n\nWe create comprehensive design systems that maintain consistency across your entire product ecosystem. From initial wireframes to high-fidelity prototypes, we iterate based on user feedback and usability testing. Our designs are built with developers in mind, including detailed specifications and assets that ensure smooth handoff and pixel-perfect implementation.',
     icon: Palette,
     themeColor: '#EC4899',
-    visualComponent: UIUXScene,
+    visualComponent: PlaceholderComponent,
     deliverables: [
       'User research and personas',
       'Wireframes and user flows',
